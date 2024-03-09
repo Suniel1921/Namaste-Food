@@ -16,3 +16,9 @@
     padding: 20px;
     margin-inline: auto;
 }
+.error{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
