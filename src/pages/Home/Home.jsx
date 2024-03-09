@@ -5,11 +5,13 @@ import carouselData from '../../data/carouselData/Carousel'
 import ResturantCarousel from '../../components/resturantCarousel/ResturantCarousel'
 import Resturants from '../../data/resturants/Resturants';
 import ResCard from '../resCard/ResCard'
+import UserClass from '../../components/classbasedfunction/UserClass'
 
 const Home = () => {
 
   return (
     <>
+    <UserClass name={"logins"} location={"Gaushala-Nepal"}/>
     <div className='container'>
     <h2>What's on your mind?</h2>      
         <div className='carouselCategory'> 
