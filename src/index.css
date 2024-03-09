@@ -2,23 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-.container{
-    /* max-width: 1250px; */
-    padding: 20px;
-    margin-inline: auto;
+.container {
+  /* max-width: 1250px; */
+  padding: 20px;
+  margin-inline: auto;
 }
-.error{
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.resContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.diliveryImg {
+  display: flex;
+  gap: 10px;
+}
+
+.rating {
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 20px 20px;
+}
+
+.dashedUnderline {
+  border: 1px dashed gray;
+  margin-top: 23px;
+
+}
+
+.time {
+  margin-top: 34px;
+  display: flex;
+  gap: 12px;
+  margin-left: 265px;
+}
+
+.containerres{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    height: 70vh;
+    gap: 10px;
+
+}
+
+.leftres{
+    width: 50%;
+}
+.rightres{
+    width: 50%;
+}
+
+.addToCart img{
+    width: 20%;
+
+}
+
+
+.cardContainer a{
+    color: black;
+    text-decoration: none;
 }

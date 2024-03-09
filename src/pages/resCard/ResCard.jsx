@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react';
 import cardData from '../../data/Card/Card';
 import '../resCard/rescard.css';
 import Shimmer from '../../components/shimmer/Shimmer';
+import { Link } from 'react-router-dom';
 
 const ResCard = () => {
     const [topRatedData, setTopRatedData] = useState([]);
     // const [topRatedData, setTopRatedData] = useState(cardData);
     // console.log('top rated data is : ', topRatedData)
     const [searchText, setSearchText] = useState("");
-    console.log(searchText)
+    console.log('top rated data ', topRatedData)
 
     const filterTopRatedData = () => {
         const filterData = topRatedData.filter((ratedData) => ratedData.info.avgRating > 4);
@@ -49,10 +50,9 @@ const ResCard = () => {
                     <input value={searchText} onChange={(e) => {setSearchText(e.target.value)}} type="search" name="search" id="" />
                     <button onClick={()=>{
                         console.log(searchText)
-                        const filterSearchData = topRatedData.filter((searchData)=> searchData.data.name.includes(searchText))
+                        const filterSearchData = topRatedData.filter((searchData)=> searchData?.info?.name.includes(searchText))                        
                         // const filterSearchData = topRatedData.filter((searchData)=> searchData.data.info.name.includes(searchText))
                         setTopRatedData(filterSearchData)
-                        console.log(filterSearchData)
                     }} >Search</button>
                 </div>
             </div>
@@ -60,7 +60,8 @@ const ResCard = () => {
             {topRatedData && (
                 <div className='cardContainer'>
                     {topRatedData.map((data) => (
-                        <div className='cardData' key={data.info.id}>
+                        <Link className='cardData' key={data.info.id} to={'resturant/'+ data.info.id}>
+                        <div className='cardDatass' >
                             <img className='cardImg' src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${data.info.cloudinaryImageId}`} alt="" />
 
                             <h3>{data.info.name.substring(0, 30)}</h3>
@@ -70,6 +71,7 @@ const ResCard = () => {
                             </div>
                             <p>{data.info.cuisines.join(',')}</p>
                         </div>
+                        </Link>
                     ))}
                 </div>
             )}

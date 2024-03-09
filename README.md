@@ -13,3 +13,8 @@ import {Component} from "path"
 -React Hooks is a Normal Javascript Utilities Functions
 -useState() -Superpowerful State Variable in react
 -useEffect
+
+
+# 2 types of routing in web apps
+-client side routing
+-server side routing
