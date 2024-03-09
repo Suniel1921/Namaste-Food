@@ -1,0 +1,32 @@
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .cardData {
+    flex-basis: calc(25% - 20px); 
+    flex-grow: 1;
+  }
+  
+  .cardImg {
+    width: 100%;
+    height: 34vh;
+    object-fit: cover;
+    margin-top: 34px;
+    border-radius: 9px;
+  }
+  
+  .rating_and_time{
+    display: flex;
+    gap: 10px;
+  }
+
+  .searchTopRatedBtn{
+    display: flex;
+    gap: 20px;
+  }
+
+
+
+  

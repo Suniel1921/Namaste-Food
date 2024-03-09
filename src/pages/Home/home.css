@@ -1,0 +1,19 @@
+.carouselCategory {
+    display: flex;
+    gap: 2rem;
+    overflow: auto; 
+  }
+  
+  .carouselCategory::-webkit-scrollbar {
+    width: 0; 
+  }
+
+  .resturantCarouseData{
+    display: flex;
+    overflow: auto;
+  }
+  
+  .resturantCarouseData::-webkit-scrollbar{
+    width: 0;
+
+  }
