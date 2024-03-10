@@ -6,8 +6,13 @@ import ResturantCarousel from '../../components/resturantCarousel/ResturantCarou
 import Resturants from '../../data/resturants/Resturants';
 import ResCard from '../resCard/ResCard'
 import UserClass from '../../components/classbasedfunction/UserClass'
+import useOnlineStatus from '../../utils/useOnlineStatus'
 
 const Home = () => {
+    const onlineStatus =  useOnlineStatus();
+    if(onlineStatus === false) return (
+        <h3>Opps ! Look like you are offline ! please connecte your internet</h3>
+    )
 
   return (
     <>
