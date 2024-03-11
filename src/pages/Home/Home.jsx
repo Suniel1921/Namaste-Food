@@ -16,7 +16,7 @@ const Home = () => {
 
   return (
     <>
-    <UserClass name={"logins"} location={"Gaushala-Nepal"}/>
+    {/* <UserClass name={"logins"} location={"Gaushala-Nepal"}/> */} 
     <div className='container'>
     <h2>What's on your mind?</h2>      
         <div className='carouselCategory'> 

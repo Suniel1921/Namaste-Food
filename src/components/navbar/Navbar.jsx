@@ -16,7 +16,7 @@ const Navbar = () => {
                 <div><h3 className='logo'>logo</h3></div>
                 <div className='navlinks'>
                 
-                 <p> You are  {onlineStatus ? ('🟢') : ('🔴')}</p>
+                 <p> Online Status{onlineStatus ? ('🟢') : ('🔴')}</p>
   
                     <ul>
                         <NavLink to={'/'}>Home</NavLink>
