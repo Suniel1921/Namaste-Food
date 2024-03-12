@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import Carousel from '../../components/carousel/Carousel'
 import '../Home/home.css'
 import carouselData from '../../data/carouselData/Carousel'
@@ -9,6 +9,11 @@ import UserClass from '../../components/classbasedfunction/UserClass'
 import useOnlineStatus from '../../utils/useOnlineStatus'
 
 const Home = () => {
+
+    const Test = lazy(()=> import ('../lazyLoading/Test'));
+
+
+
     const onlineStatus =  useOnlineStatus();
     if(onlineStatus === false) return (
         <h3>Opps ! Look like you are offline ! please connecte your internet</h3>
@@ -16,6 +21,12 @@ const Home = () => {
 
   return (
     <>
+
+    {/* <Suspense fallback={<h2>Testing ....</h2>}>
+    <Test/>
+    </Suspense> */}
+
+
     {/* <UserClass name={"logins"} location={"Gaushala-Nepal"}/> */} 
     <div className='container'>
     <h2>What's on your mind?</h2>      
